@@ -1,3 +1,32 @@
+<#
+.SYNOPSIS
+Short description
+
+.DESCRIPTION
+Long description
+
+.PARAMETER InputArchive
+Parameter description
+
+.PARAMETER OutputFolder
+Parameter description
+
+.PARAMETER ArchivePass
+Parameter description
+
+.PARAMETER FileSpecToExtract
+Parameter description
+
+.PARAMETER ExtractWithoutPaths
+Parameter description
+
+.EXAMPLE
+An example
+
+.NOTES
+General notes
+#>
+
 function se7enUnZip {
     param (
         [Parameter(Position=0,
