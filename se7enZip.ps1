@@ -1,24 +1,24 @@
 <#
 .SYNOPSIS
-Short description
+7-Zip unzip wrapper
 
 .DESCRIPTION
-Long description
+Function that wraps 7-Zip's extract functionality.  Requires 7-Zip be installed.
 
 .PARAMETER InputArchive
-Parameter description
+Archive to process
 
 .PARAMETER OutputFolder
-Parameter description
+Location to place extracted files
 
 .PARAMETER ArchivePass
-Parameter description
+Password to use while extracting files
 
 .PARAMETER FileSpecToExtract
-Parameter description
+Filespec of file(s) to extract
 
 .PARAMETER ExtractWithoutPaths
-Parameter description
+Don't create file paths when extracting
 
 .EXAMPLE
 An example
@@ -26,7 +26,6 @@ An example
 .NOTES
 General notes
 #>
-
 function se7enUnZip {
     param (
         [Parameter(Position=0,
