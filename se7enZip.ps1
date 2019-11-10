@@ -60,6 +60,28 @@ function se7enUnZip {
 
 }
 
+<#
+.SYNOPSIS
+Archive files into a self-extracting EXE
+
+.DESCRIPTION
+Function that uses 7-Zip to archive files into a self-extracting EXE.  Requires 7-Zip be installed.
+
+.PARAMETER OutputArchive
+Name of archive to create (ie: 'Output.exe')
+
+.PARAMETER FilesToArchive
+File spec of files to add to archive (ie: '*.csv')
+
+.PARAMETER ArchivePass
+Password to apply to completed archive
+
+.EXAMPLE
+se7enZipToExe -FilesToArchive 'C:\temp\*.CSV' -OutputArchive 'C:\temp\csvFiles.EXE' -ArchivePass 'L4meP4ssw0rd!'
+
+.NOTES
+Requires 7-Zip be installed.
+#>
 function se7enZipToExe {
     param (
         [Parameter(Position=0,
