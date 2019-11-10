@@ -21,10 +21,10 @@ Filespec of file(s) to extract
 Don't create file paths when extracting
 
 .EXAMPLE
-An example
+se7enUnZip -InputArchive In.zip -OutputFolder 'C:\temp' -ArchivePass 'L4meP4ssw0rd!'
 
 .NOTES
-General notes
+Warning: This will overwrite matching output files without prompting.
 #>
 function se7enUnZip {
     param (
@@ -48,7 +48,7 @@ function se7enUnZip {
     }
 
     if (-Not (Test-Path "$env:ProgramFiles\7-Zip\7z.exe")) {
-        throw "$env:ProgramFiles\7-Zip\7z.exe needed"
+        throw "$env:ProgramFiles\7-Zip\7z.exe needed."
     }
     Set-Alias 7z "$env:ProgramFiles\7-Zip\7z.exe"
 
@@ -73,7 +73,7 @@ function se7enZipToExe {
     )
 
     if (-Not (Test-Path "$env:ProgramFiles\7-Zip\7z.exe")) {
-        throw "$env:ProgramFiles\7-Zip\7z.exe needed"
+        throw "$env:ProgramFiles\7-Zip\7z.exe needed."
     }
     Set-Alias 7z "$env:ProgramFiles\7-Zip\7z.exe"
 
