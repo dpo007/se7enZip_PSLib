@@ -106,6 +106,32 @@ function se7enZipToExe {
     }
 }
 
+<#
+.SYNOPSIS
+Re-archive, removing provided password.
+
+.DESCRIPTION
+Uses 7-Zip to extract password-protected archive, and then creates a new archive without it.
+
+.PARAMETER InputArchive
+Archive to process
+
+.PARAMETER OutputFolder
+Location to place produced archive
+
+.PARAMETER WorkingFolder
+Working folder used to hold files which re-archiving (default = "TempWork" in script's folder)
+
+.PARAMETER ArchivePass
+Password to remove
+
+.EXAMPLE
+RemoveZipPassword -InputArchive In.zip -ArchivePass 'L4meP4ssw0rd!'
+
+.NOTES
+If the output folder is not specified, then use the input file's folder, and overwrite the originals.
+#>
+
 function RemoveZipPassword {
     param (
         [Parameter(Mandatory=$true)]
