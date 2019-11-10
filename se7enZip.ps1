@@ -131,7 +131,6 @@ RemoveZipPassword -InputArchive In.zip -ArchivePass 'L4meP4ssw0rd!'
 .NOTES
 If the output folder is not specified, then use the input file's folder, and overwrite the originals.
 #>
-
 function RemoveZipPassword {
     param (
         [Parameter(Mandatory=$true)]
